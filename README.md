@@ -47,3 +47,28 @@ An AI-powered document summarization application built with a **Django** backend
    npm install
    npm run dev
    ```
+
+## 🌿 Git Branching Strategy
+
+This project follows a structured branching model:
+
+- **`main`**: Production branch. Always stable, fully working, and deployed.
+- **`feature` / `feature/<feature-name>`**: Used for developing a single feature or screen.
+- **`fix` / `fix/<bug-name>`**: Used for bug fixes and hotfixes.
+
+### Workflow Guidelines:
+1. **New Feature**: Create a branch off `main` or `feature`:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+2. **Bug Fix**: Create a branch off `main`:
+   ```bash
+   git checkout -b fix/your-bug-name
+   ```
+3. **Merging**: Merge verified `feature` or `fix` branches into `main` after testing:
+   ```bash
+   git checkout main
+   git merge feature/your-feature-name
+   git push origin main
+   ```
+
